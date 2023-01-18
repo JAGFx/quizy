@@ -5,7 +5,7 @@ import type { QuestionCollection } from "@/domain/quiz/question.type";
 import type { Category } from "@/domain/category/category.type";
 
 export const POINT_FOR_RIGHT_ANSWER = 5;
-export const QUESTION_BY_QUIZ = 3;
+export const QUESTION_BY_QUIZ = 20;
 
 export const getNextQuestion = (
   quiz: Quiz,
