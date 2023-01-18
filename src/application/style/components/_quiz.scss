@@ -1,0 +1,15 @@
+@import "../abstracts/variable";
+
+.quiz-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz {
+  > .head {
+    h3 {
+      margin: 0 0 0 $margin;
+    }
+  }
+}

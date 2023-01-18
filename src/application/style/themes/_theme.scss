@@ -1,0 +1,45 @@
+@import "../abstracts/variable";
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h3 {
+  margin: 0 0 calc($margin / 2) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}

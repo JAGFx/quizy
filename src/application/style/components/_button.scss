@@ -1,0 +1,16 @@
+@import "../abstracts/variable";
+
+button {
+  margin: calc($margin / 2);
+  padding: calc($padding / 4) calc($padding / 2);
+  border-radius: $border-radius;
+  background: $color-accent-1;
+  color: $color-black;
+  border: 1px solid $color-accent-1;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-accent-1-dark-5;
+  }
+}

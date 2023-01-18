@@ -1,0 +1,10 @@
+@import "../abstracts/variable";
+
+.timer {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+  border-radius: 5rem;
+  background: $color-black-light-90;
+  border: 2px solid $color-accent-1;
+}

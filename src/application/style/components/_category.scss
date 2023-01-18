@@ -1,0 +1,15 @@
+@import "../abstracts/variable";
+
+.category {
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: $margin;
+
+  flex-direction: column;
+  background-image: url('https://picsum.photos/200?blur=8');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
