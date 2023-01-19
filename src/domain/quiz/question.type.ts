@@ -96,7 +96,11 @@ export class QuestionCollection extends Map<string, Question> {
    * @param question
    * @return number
    */
-  indexOfValue(question: Question): number {
+  indexOfValue(question: Question | null): number {
+    if (question === null) {
+      return -1;
+    }
+
     return Array.from(this.values()).indexOf(question);
   }
 }
