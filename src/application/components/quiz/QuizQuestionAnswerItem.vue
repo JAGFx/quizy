@@ -3,7 +3,7 @@
     class="answer d-flex-center-center"
     :class="{
       valid: answerSelected && currentQuestion?.isAValidAnswer(props.answer),
-      invalid: answerSelected && !currentQuestion?.isAValidAnswer(props.answer),
+      invalid: answerSelected && !currentQuestion?.isAValidAnswer(props.answer)
     }"
     @click="() => setAnAnswer(props.answer)"
   >
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { useQuiz } from "@/application/components/quiz/useQuiz";
+import { useQuiz } from '@/application/components/quiz/useQuiz';
 
 type QuizQuestionAnswerItemProps = {
   answer: string;

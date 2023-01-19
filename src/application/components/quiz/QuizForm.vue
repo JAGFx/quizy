@@ -19,31 +19,34 @@
   </section>
   <QuizQuestionAnswerList />
   <div class="d-flex-center-center">
-    <button @click="passToTheNextQuestion" v-if="!isTheLastQuestion">
+    <button v-if="!isTheLastQuestion" @click="passToTheNextQuestion">
       Next
     </button>
-    <button @click="finishQuiz" v-else>Next</button>
+    <button v-else @click="finishQuiz">Next</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import QuizQuestionAnswerList from "@/application/components/quiz/QuizQuestionAnswerList.vue";
-import { useQuiz } from "@/application/components/quiz/useQuiz";
-import { useQuizy } from "@/application/components/useQuizy";
-import { Page } from "@/application/shared/pages.type";
-import { useTimer } from "@/application/components/useTimer";
+import QuizQuestionAnswerList from '@/application/components/quiz/QuizQuestionAnswerList.vue';
+import { useQuiz } from '@/application/components/quiz/useQuiz';
+import { useQuizy } from '@/application/components/useQuizy';
+import { useTimer } from '@/application/components/useTimer';
+import { Page } from '@/application/shared/pages.type';
 
 const {
   quiz,
   currentQuestion,
   isTheLastQuestion,
   passToTheNextQuestion,
-  finish,
+  finish
 } = useQuiz();
 
 const { switchToPage } = useQuizy();
 const { timer } = useTimer();
 
+/**
+ * End the quiz answer time and generate a score data. Then move to the result page
+ */
 const finishQuiz = () => {
   finish();
   switchToPage(Page.Result);

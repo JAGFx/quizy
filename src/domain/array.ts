@@ -1,3 +1,7 @@
+/**
+ * Shuffle entries of an array
+ * @param arr
+ */
 export const shuffle = ([...arr]) => {
   let m = arr.length;
   while (m) {

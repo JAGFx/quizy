@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import CategoryListItem from "@/application/components/category/CategoryListItem.vue";
-import { useQuizy } from "@/application/components/useQuizy";
+import CategoryListItem from '@/application/components/category/CategoryListItem.vue';
+import { useQuizy } from '@/application/components/useQuizy';
 
 const { categories, updateCategoriesList } = useQuizy();
 

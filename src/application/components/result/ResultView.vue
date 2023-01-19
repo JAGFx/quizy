@@ -13,13 +13,16 @@
 </template>
 
 <script setup lang="ts">
-import { useQuiz } from "@/application/components/quiz/useQuiz";
-import { useQuizy } from "@/application/components/useQuizy";
-import { Page } from "@/application/shared/pages.type";
+import { useQuiz } from '@/application/components/quiz/useQuiz';
+import { useQuizy } from '@/application/components/useQuizy';
+import { Page } from '@/application/shared/pages.type';
 
 const { scorePoint, score, reset } = useQuiz();
 const { switchToPage } = useQuizy();
 
+/**
+ * Rest quiz to the initial state to be able to relaunch another quiz. Then move to the category list page
+ */
 const goBackToCategoryList = () => {
   reset();
   switchToPage(Page.CategoryList);

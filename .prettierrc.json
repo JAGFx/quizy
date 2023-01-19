@@ -1,1 +1,13 @@
-{}
+{
+  "semi": true,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "printWidth": 80,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "^@/domain/(.*)$",
+    "^@/application/(.*)$",
+    "^[./]"
+  ]
+}

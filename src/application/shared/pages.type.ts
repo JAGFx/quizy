@@ -1,12 +1,12 @@
-import type { Component } from "vue";
+import type { Component } from 'vue';
 
 export const enum Page {
   CategoryList,
   Quiz,
-  Result,
+  Result
 }
 
-export type PageComponents = {
+export type PageComponent = {
   name: Page;
   component: Component;
 };

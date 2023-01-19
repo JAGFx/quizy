@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 $color-black: #000;
 $color-black-light-90: color.adjust($color-black, $lightness: 90%);

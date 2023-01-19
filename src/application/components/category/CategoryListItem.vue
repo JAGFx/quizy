@@ -2,7 +2,7 @@
   <article
     class="category d-flex-center-center"
     :style="{
-      backgroundImage: getBackgroundImage(),
+      backgroundImage: getBackgroundImage()
     }"
   >
     <h3 class="text-white">{{ props.category.name }}</h3>
@@ -11,11 +11,17 @@
 </template>
 
 <script setup lang="ts">
-import type { Category } from "@/domain/category/category.type";
-import { useQuizy } from "@/application/components/useQuizy";
-import { useQuiz } from "@/application/components/quiz/useQuiz";
-import { Page } from "@/application/shared/pages.type";
+import type { Category } from '@/domain/category/category.type';
 
+import { useQuiz } from '@/application/components/quiz/useQuiz';
+import { useQuizy } from '@/application/components/useQuizy';
+import { Page } from '@/application/shared/pages.type';
+
+/**
+ * Cool stuff to get a random image
+ *
+ * @doc https://picsum.photos/
+ */
 const getBackgroundImage = (): string =>
   `linear-gradient(rgba(0,0,0,.5), transparent), url('https://picsum.photos/200?blur=8?random=${Math.random()}')`;
 

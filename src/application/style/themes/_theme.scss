@@ -1,11 +1,12 @@
-@import "../abstracts/variable";
+@import '../abstracts/variable';
 
 * {
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -24,7 +25,8 @@ body {
   align-items: center;
 }
 
-h1, h3 {
+h1,
+h3 {
   margin: 0 0 calc($margin / 2) 0;
 }
 

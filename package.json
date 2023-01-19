@@ -8,13 +8,16 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "npx eslint src --fix --ignore-path .gitignore",
+    "lint:prettier": "npx prettier src --write"
   },
   "dependencies": {
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",

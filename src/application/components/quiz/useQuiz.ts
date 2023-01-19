@@ -1,16 +1,18 @@
-import { computed, reactive } from "vue";
-import type { Quiz, Score } from "@/domain/quiz/quiz.type";
-import type { Question } from "@/domain/quiz/question.type";
+import { computed, reactive } from 'vue';
+
+import type { Category } from '@/domain/category/category.type';
+import type { Question } from '@/domain/quiz/question.type';
 import {
   calculateScorePoint,
   createNewScore,
   getNextQuestion,
   isAValidAnswer,
-  quizIsTheLastQuestion,
-  startQuiz,
-} from "@/domain/quiz/quiz";
-import type { Category } from "@/domain/category/category.type";
-import { useTimer } from "@/application/components/useTimer";
+  quizIsAtTheLastQuestion,
+  startQuiz
+} from '@/domain/quiz/quiz';
+import type { Quiz, Score } from '@/domain/quiz/quiz.type';
+
+import { useTimer } from '@/application/components/useTimer';
 
 type QuizState = {
   quiz: Quiz | null;
@@ -25,7 +27,7 @@ const state = reactive<QuizState>({
   quiz: null,
   currentQuestion: null,
   answerSelected: false,
-  score: createNewScore(),
+  score: createNewScore()
 });
 
 const getters = {
@@ -34,11 +36,11 @@ const getters = {
     () => state.currentQuestion as Question
   ),
   isTheLastQuestion: computed<boolean>(() =>
-    quizIsTheLastQuestion(state.quiz, state.currentQuestion as Question)
+    quizIsAtTheLastQuestion(state.quiz, state.currentQuestion as Question)
   ),
   answerSelected: computed<boolean>(() => state.answerSelected),
   scorePoint: computed<number>(() => calculateScorePoint(state.score)),
-  score: computed<Score>(() => state.score),
+  score: computed<Score>(() => state.score)
 };
 
 const actions = {
@@ -86,10 +88,10 @@ const actions = {
     state.currentQuestion = null;
     state.answerSelected = false;
     state.score = createNewScore();
-  },
+  }
 };
 
 export const useQuiz = () => ({
   ...getters,
-  ...actions,
+  ...actions
 });
