@@ -12,7 +12,7 @@ import {
 } from '@/domain/quiz/quiz';
 import type { Quiz, Score } from '@/domain/quiz/quiz.type';
 
-import { useTimer } from '@/application/components/useTimer';
+import { useTimer } from '@/application/shared/useTimer';
 
 type QuizState = {
   quiz: Quiz | null;

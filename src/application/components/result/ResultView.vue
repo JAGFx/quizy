@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 import { useQuiz } from '@/application/components/quiz/useQuiz';
-import { useQuizy } from '@/application/components/useQuizy';
 import { Page } from '@/application/shared/pages.type';
+import { useQuizy } from '@/application/shared/useQuizy';
 
 const { scorePoint, score, reset } = useQuiz();
 const { switchToPage } = useQuizy();

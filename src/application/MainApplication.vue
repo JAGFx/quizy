@@ -8,9 +8,9 @@ import { computed } from 'vue';
 import CategoryList from '@/application/components/category/CategoryList.vue';
 import QuizForm from '@/application/components/quiz/QuizForm.vue';
 import ResultView from '@/application/components/result/ResultView.vue';
-import { useQuizy } from '@/application/components/useQuizy';
 import { Page } from '@/application/shared/pages.type';
 import type { PageComponent } from '@/application/shared/pages.type';
+import { useQuizy } from '@/application/shared/useQuizy';
 
 /**
  * List of pages

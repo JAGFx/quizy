@@ -14,8 +14,8 @@
 import type { Category } from '@/domain/category/category.type';
 
 import { useQuiz } from '@/application/components/quiz/useQuiz';
-import { useQuizy } from '@/application/components/useQuizy';
 import { Page } from '@/application/shared/pages.type';
+import { useQuizy } from '@/application/shared/useQuizy';
 
 /**
  * Cool stuff to get a random image

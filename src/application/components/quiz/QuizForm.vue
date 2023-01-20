@@ -29,9 +29,9 @@
 <script setup lang="ts">
 import QuizQuestionAnswerList from '@/application/components/quiz/QuizQuestionAnswerList.vue';
 import { useQuiz } from '@/application/components/quiz/useQuiz';
-import { useQuizy } from '@/application/components/useQuizy';
-import { useTimer } from '@/application/components/useTimer';
 import { Page } from '@/application/shared/pages.type';
+import { useQuizy } from '@/application/shared/useQuizy';
+import { useTimer } from '@/application/shared/useTimer';
 
 const {
   quiz,

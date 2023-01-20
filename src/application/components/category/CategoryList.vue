@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import CategoryListItem from '@/application/components/category/CategoryListItem.vue';
-import { useQuizy } from '@/application/components/useQuizy';
+import { useQuizy } from '@/application/shared/useQuizy';
 
 const { categories, updateCategoriesList } = useQuizy();
 
