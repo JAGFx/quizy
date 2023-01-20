@@ -7,7 +7,11 @@ This is a POC to work with the [Trivia API](https://the-trivia-api.com/) and Vue
 
 See the [LIVE DEMO](https://jagfx.github.io/quizy/) !
 
-## Goal
+## Stack
+
+This project contain zero dependencies. Just Vue and typescript
+
+## Structure
 
 This application are split in two folder:
 
